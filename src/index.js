@@ -3,17 +3,6 @@ function eval() {
     return
 }
 
-const operations = {
-    '+': (x, y) => x + y,
-    '-': (x, y) => x - y,
-    '*': (x, y) => x * y,
-    '/': (x, y) => {
-        if (y === 0) throw 'TypeError: Division by zero.'
-        return x / y
-    },
-}
-const operators = Object.keys(operations)
-
 function expressionCalculator(expr) {
     let array = expr.replace(/\s/g, '').split('')
     let stack = []
